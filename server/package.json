@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "name": "pictionary-server",
+  "version": "1.0.0",
+  "description": "WebSocket server for Pictionary game",
+  "main": "server.js"
+} 
