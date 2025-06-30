@@ -114,7 +114,7 @@ const GameLobby: React.FC<GameLobbyProps> = ({ onJoinRoom }) => {
                   value={roomId}
                   onChange={(e) => handleRoomIdChange(e.target.value)}
                   placeholder="Enter room code (e.g., ROOMABC123)..."
-                  className="text-lg font-mono"
+                  className="md:text-lg text-xs font-mono"
                   disabled={isLoading}
                 />
                 {error && (
