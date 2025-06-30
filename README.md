@@ -35,7 +35,7 @@ A real-time multiplayer Pictionary game built with React and TypeScript. Players
 
 3. **Start the development server**
    ```bash
-   npm run dev
+   npm run dev:full
    ```
 
 4. **Open your browser**
@@ -44,9 +44,9 @@ A real-time multiplayer Pictionary game built with React and TypeScript. Players
 
 ### Mobile Testing
 
-To test the mobile experience:
+To test the mobile with another player:
 
-1. **Find your local IP address**
+1. **Find the network where it is running by finding the  IP address of web running version**
    ```bash
    # On Windows ipconfig
    
@@ -54,15 +54,40 @@ To test the mobile experience:
    ifconfig
    ```
 
+   or just copy what displays in network when app is running like in the image bellow:
+   
+   ![Server Running](server_running.png)
+   
+
 2. **Access from mobile device**
    - Connect your mobile device to the same WiFi network
    - Open browser and navigate to `http://YOUR_IP_ADDRESS:8080`
+
+   or 
+   
+   - Connect your mobile device to the same WiFi network
+   - just copy paste on the mobile browser the url of the network in the image example it would be:
+    
+    ```bash
+    http://192.168.1.11:8080/
+   ```
+
 
 ## How to Play
 
 1. **Join a Game**
    - Enter your name
    - Enter a room code to join an existing room or create a new one
+   - To join a created game just enter your username and past th room code from the existing room
+   
+   Copy the room id from the server running ROOMI0049Y in this case:
+   
+   ![Room](room.png)
+
+   and paste it in the room code (don't forget to add your player name).
+   
+   ![Room Join](room_join.png)
+
 
 2. **Draw Your Turn**
    - When it's your turn, you'll see a word to draw
@@ -74,7 +99,6 @@ To test the mobile experience:
    - Correct guesses earn you points
    - Watch the timer and make your guesses count!
 
-## Game Architecture
 
 ### Frontend Components
 
@@ -91,33 +115,6 @@ To test the mobile experience:
 - **Real-time Updates** - Instant synchronization between players
 - **Room Management** - Easy room creation and joining
 
-## For Real-time Multiplayer
-
-**Important Note**: This current version includes the UI and game logic, but for full real-time multiplayer functionality, you'll need to connect to a backend service.
-
-### Recommended: Supabase Integration
-
-For real-time features like:
-- Live drawing synchronization
-- Real-time chat and guesses
-- Room management
-- Player state sync
-
-I recommend connecting this project to Supabase for the backend functionality:
-
-1. Click the green "Supabase" button in the Lovable interface
-2. Connect to your Supabase project
-3. This will enable real-time database features for multiplayer sync
-
-### Environment Setup
-
-Create a `.env` file in the root directory (when using Supabase):
-
-```env
-# Supabase Configuration (obtained from Supabase dashboard)
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
 
 ## Development Notes
 
