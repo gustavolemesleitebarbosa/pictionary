@@ -48,7 +48,8 @@ To test the mobile with another player:
 
 1. **Find the network where it is running by finding the  IP address of web running version**
    ```bash
-   # On Windows ipconfig
+   # On Windows 
+   ipconfig
    
    # On Mac/Linux
    ifconfig
@@ -80,8 +81,8 @@ To test the mobile with another player:
    - Enter a room code to join an existing room or create a new one
    - To join a created game just enter your username and past th room code from the existing room
    
-   Copy the room id from the server running ROOMI0049Y in this case:
-   
+   For joining an existing game: Copy the room id from the server running ROOMI0049Y in this case:
+
    ![Room](room.png)
 
    and paste it in the room code (don't forget to add your player name).
